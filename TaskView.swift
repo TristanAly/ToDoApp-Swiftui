@@ -8,14 +8,21 @@
 import SwiftUI
 
 
-struct TaskView: View {
+struct HomePage: View {
     
     var body: some View {
         ZStack {
             LinearGradient(colors: [.black.opacity(1),.blue.opacity(1),.purple.opacity(1)], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
-           
+            
+
+            
             VStack (alignment:.leading) {
+                Spacer()
+              
+                    DecoView()
+                  
+                
                 Spacer()
                     Text("Management \neverything \nwith one hand")
                     .font(.largeTitle)
@@ -69,8 +76,9 @@ struct TaskView: View {
 
 
 
-struct TaskView_Previews: PreviewProvider {
+struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView()
+    HomePage()
     }
 }
+
